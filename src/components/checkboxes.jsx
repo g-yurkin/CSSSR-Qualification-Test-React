@@ -1,111 +1,49 @@
 import React from "react";
 import styled from "styled-components";
 
+const link = <span>Читаю <a href="http://blog.csssr.ru">blog.csssr.ru</a></span>;
+
+const CheckboxesCheck =(props) => {
+    return(
+        <label className="checkboxes__check">
+            <input className="checkboxes__input" type="checkbox" defaultChecked={props.defaultChecked}/>
+            <span className="checkboxes__picture"></span>
+            {props.title}
+        </label>
+    )
+}
 const Checkboxes = () => {
     return(
         <StyledCheckboxes>
             <h2 className="checkboxes__title">Расскажите о себе чекбоксами</h2>
             <p className="checkboxes__description">Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
             <CheckboxesContainer>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked/>
-                    <span className="checkboxes__picture"></span>
-                    БЭМ/OOCSS
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Pug (Jade)
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Stylus/LESS/SASS
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Работаю с SVG
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Вертаю семантично
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" />
-                    <span className="checkboxes__picture"></span>
-                    Acessibility (A11Y)
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    ES2015/2016
-                </label>    
+                
+                <CheckboxesCheck title='БЭМ/OOCSS' defaultChecked/>
+                <CheckboxesCheck title='Pug (Jade)' defaultChecked/>
+                <CheckboxesCheck title='Stylus/LESS/SASS' defaultChecked/>
+                <CheckboxesCheck title='Работаю с SVG' defaultChecked/>
+                <CheckboxesCheck title='Вертаю семантично' defaultChecked/>
+                <CheckboxesCheck title='Acessibility (A11Y)' />
+                <CheckboxesCheck title='ES2015/2016' defaultChecked/>
+                
             </CheckboxesContainer>
             <CheckboxesContainer>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Gulp/GRUNT
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox"  />
-                    <span className="checkboxes__picture"></span>
-                    Webpack
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox"  />
-                    <span className="checkboxes__picture"></span>
-                    Дружу с WebGL
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    jQuery
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox"  />
-                    <span className="checkboxes__picture"></span>
-                    Знаю/изучаю Angular
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Знаю/изучаю React
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Знаю/изучаю Node.js
-                </label>    
+                <CheckboxesCheck title='Gulp/GRUNT' defaultChecked/>
+                <CheckboxesCheck title='Webpack' />
+                <CheckboxesCheck title='Дружу с WebGL' />
+                <CheckboxesCheck title='Знаю/умею Vue.js' defaultChecked/>
+                <CheckboxesCheck title='Знаю/изучаю Angular' />
+                <CheckboxesCheck title='Знаю/изучаю React' defaultChecked/>
+                <CheckboxesCheck title='Знаю/изучаю Node.js' defaultChecked/>
+                
             </CheckboxesContainer>
             <CheckboxesContainer>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Использую Git
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    С глазомером всё ок
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked/>
-                    <span className="checkboxes__picture"></span>
-                    Читаю <a href="http://blog.csssr.ru">blog.csssr.ru</a>
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    Я ленивый
-                </label>
-                <label className="checkboxes__check">
-                    <input className="checkboxes__input" type="checkbox" defaultChecked />
-                    <span className="checkboxes__picture"></span>
-                    У меня хороший английский
-                </label>
+                <CheckboxesCheck title='Использую Git' defaultChecked/>
+                <CheckboxesCheck title='С глазомером всё ок' defaultChecked/>
+                <CheckboxesCheck title={link} defaultChecked/>
+                <CheckboxesCheck title='Я ленивый' />
+                <CheckboxesCheck title='У меня хороший английский' defaultChecked/>
                         
             </CheckboxesContainer>
             
@@ -182,7 +120,7 @@ const CheckboxesContainer = styled.div`
     }
     @media screen and (max-width: 960px) {
        
-        width 100%;    
+        width: 100%;    
             
     }    
 `;
